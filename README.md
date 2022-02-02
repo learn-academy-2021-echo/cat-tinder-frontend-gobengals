@@ -13,7 +13,33 @@ $ git checkout -b frontend-structure
  class App extends Component{
    render(){
      return(
-      )
+
+       )
    }
  }
+
+ added each component call in the return
  export defaul App
+
+ $ yarn add bootstrap
+$ yarn add reactstrap
+
+in app.js:
+constructor(props){
+    super(props)
+    this.state = {
+      cats: mockCats
+    }
+  }
+
+in index.js: 'import 'bootstrap/dist/css/bootstrap.min.css';
+
+ $ yarn add react-router-dom@5.3.0
+
+ in app.js:
+
+ import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
