@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
 
-class New extends Component{
+class CatNew extends Component{
   render(){
     return(
       <h1> New cats</h1>
     )
   }
 }
-export default New;
+export default CatNew;

@@ -11,7 +11,7 @@ import { Navbar,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText } from 'reactstrap'
+  NavbarText } from 'reactstrap';
 
 
 

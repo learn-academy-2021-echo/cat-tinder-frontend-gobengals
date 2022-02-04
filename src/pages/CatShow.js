@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 
 
-class Show extends Component{
+class catShow extends Component{
   render(){
+    const { cat } = this.props
     return(
-      <h1>Show me cats</h1>
+      <>
+      <h2>Hello my name is</h2>
+
+       <p>{cat.name}</p>
+       <p>{cat.age}</p>
+       <p>{cat.enjoys}</p>
+       <img src={cat.image} alt="awesome cat pic" width=" 300px"/>
+      </>
     )
   }
 }
-export default Show;
+export default catShow;
