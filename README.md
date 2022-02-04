@@ -125,3 +125,6 @@ created file NotFound.test.js:
  - As a user, I can see a page featuring all the information for one cat.
  - Pull cat values from the object and display.
  - As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat.
+
+ #### CatCreate Functionality
+ 
