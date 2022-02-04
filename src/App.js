@@ -34,12 +34,13 @@ class App extends Component{
             render={ (props) => <CatIndex cats={this.state.cats} />}
             />
 
-          <Route path="/catshow/:id"
-	           render={(props) => {
-		          let paramId = +props.match.params.id
-		          let cat = this.state.cats.find(cat => cat.id === paramId)
-		           return <CatShow cat={cat} />
-	            } }
+            <Route
+              path="/catshow/:id"
+	            render={(props) => {
+		              let paramId = +props.match.params.id
+		              let cat = this.state.cats.find(cat => cat.id === paramId)
+		              return <CatShow cat={cat} />
+	            }}
             />
 
             <Route path="/catnew" component={CatNew} />
