@@ -34,7 +34,7 @@ class App extends Component{
             render={ (props) => <CatIndex cats={this.state.cats} />}
             />
 
-            <Route path="/catshow/:id"
+          <Route path="/catshow/:id"
 	           render={(props) => {
 		          let paramId = +props.match.params.id
 		          let cat = this.state.cats.find(cat => cat.id === paramId)
