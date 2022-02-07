@@ -13,12 +13,18 @@ class CatNew extends Component{
       newCat:{
         name: "",
         age: "",
-        enjoy: "",
+        enjoys: "",
         img: ""
       }
     }
   }
+ handleChange = (e) => {
+  let { newCat } = this.state
+  newCat[e.target.name] = e.target.value
+  this.setState({ newCat: newCat })
+ }
   render(){
+    console.log(this.state.newCat);
     return(
     <>
       <h1> New cats</h1>
@@ -28,9 +34,10 @@ class CatNew extends Component{
             Cat Name
           </Label>
           <Input
-            name="email"
+            name="name"
             placeholder="What is your name"
             type="text"
+            onChange={this.handleChange}
           />
         </FormGroup>
         <FormGroup>
@@ -41,16 +48,18 @@ class CatNew extends Component{
             name="age"
             placeholder="What is your age?"
             type="number"
+            onChange={this.handleChange}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="enjoy">
+          <Label for="enjoys">
             Your favorite hobbies
           </Label>
           <Input
-            name="enjoy"
-            placeholder="What is your favorite hobbies?"
+            name="enjoys"
+            placeholder="What are your favorite hobbies?"
             type="text"
+            onChange={this.handleChange}
           />
         </FormGroup>
         <FormGroup>
@@ -59,7 +68,8 @@ class CatNew extends Component{
           </Label>
           <Input
             name="img"
-            type="urk"
+            type="url"
+            onChange={this.handleChange}
           />
         </FormGroup>
       </Form>

@@ -14,8 +14,6 @@ import { Navbar,
   NavbarText } from 'reactstrap';
 
 
-
-
 class Header extends Component{
   render(){
     return(
@@ -27,7 +25,7 @@ class Header extends Component{
           light
           >
         <NavbarBrand href="/">
-          reactstrap
+          Cat Tinder
         </NavbarBrand>
         <NavbarToggler onClick={function noRefCheck(){}} />
         <Collapse navbar>
@@ -36,8 +34,8 @@ class Header extends Component{
           navbar
         >
         <NavItem>
-        <NavLink href="/components/">
-            Components
+        <NavLink to="/catindex">
+            All Cats
         </NavLink>
         </NavItem>
         <NavItem>
