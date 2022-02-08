@@ -16,7 +16,7 @@ class CatNew extends Component{
         name: "",
         age: "",
         enjoys: "",
-        img: ""
+        image: ""
       },
       submitted: false
     }
@@ -25,7 +25,7 @@ class CatNew extends Component{
  handleChange = (e) => {
   let { newCat } = this.state
   newCat[e.target.name] = e.target.value
-  this.setState({ newCat: newCat })
+  this.setState({newCat: newCat})
  }
 
  handleSubmit = () => {
@@ -34,10 +34,10 @@ class CatNew extends Component{
  }
 
   render(){
-    console.log(this.state.newCat);
+
     return(
     <>
-      <h1> New cats</h1>
+      <h1 style={{ color: '#FF0000' }}> My Profile </h1>
       <Form>
         <FormGroup>
           <Label for="name">
@@ -48,6 +48,7 @@ class CatNew extends Component{
             placeholder="What is your name"
             type="text"
             onChange={this.handleChange}
+            value={this.state.newCat.name}
           />
         </FormGroup>
         <FormGroup>
@@ -59,6 +60,7 @@ class CatNew extends Component{
             placeholder="What is your age?"
             type="number"
             onChange={this.handleChange}
+            value={this.state.newCat.age}
           />
         </FormGroup>
         <FormGroup>
@@ -70,16 +72,18 @@ class CatNew extends Component{
             placeholder="What are your favorite hobbies?"
             type="text"
             onChange={this.handleChange}
+            value={this.state.newCat.enjoys}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="img">
+          <Label for="image">
             Cat Profile Picture
           </Label>
           <Input
-            name="img"
+            name="image"
             type="url"
             onChange={this.handleChange}
+            value={this.state.newCat.image}
           />
         </FormGroup>
         <Button onClick={this.handleSubmit} name='Submit'>Add a New Cat</Button>

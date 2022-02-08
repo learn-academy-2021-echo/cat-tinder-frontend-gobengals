@@ -34,12 +34,12 @@ class Header extends Component{
         >
         <NavItem>
         <NavLink to="/catindex" style={{ color: '#FFF' }}>
-            All Cats
+            View All___
         </NavLink>
         </NavItem>
         <NavItem>
         <NavLink to="/catnew" style={{ color: '#FFF' }}>
-            Add a Cat
+            ____Make a Profile
         </NavLink>
         </NavItem>
       </Nav>
