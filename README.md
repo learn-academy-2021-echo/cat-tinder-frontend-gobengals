@@ -17,7 +17,6 @@ $ git checkout -b frontend-structure
        )
    }
  }
-
  added each component call in the return
  export defaul App
 
@@ -114,3 +113,18 @@ created file Footer.test.js:
 
 created file NotFound.test.js:
 -test to check if the Not Found.js page displays the correct error message passed
+
+### Cat Read Functionality
+ - As developer, I can pass the cat mock data in state to my index component.
+  - We refactor static CatIndex route to be a dynamic route by passing props.
+ - As a developer, I have test coverage on my index component.
+ - As a user, I can see a page that list of all the cat names.
+ - As a developer, I can refactor the catShow route to pass the param of id for one cat.
+ - As a developer, I have test coverage on my show component.
+ - Add param to the route, convert the param to a number, find the cat with the appropriate id.
+ - As a user, I can see a page featuring all the information for one cat.
+ - Pull cat values from the object and display.
+ - As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat.
+
+ #### CatCreate Functionality
+ 
