@@ -6,13 +6,12 @@ import { Navbar,
   Collapse,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   NavbarText } from 'reactstrap';
-
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component{
   render(){
@@ -34,41 +33,17 @@ class Header extends Component{
           navbar
         >
         <NavItem>
-        <NavLink to="/catindex">
+        <NavLink to="/catindex" style={{ color: '#FFF' }}>
             All Cats
         </NavLink>
         </NavItem>
         <NavItem>
-        <NavLink href="https://github.com/reactstrap/reactstrap">
-            GitHub
+        <NavLink to="/catnew" style={{ color: '#FFF' }}>
+            Add a Cat
         </NavLink>
         </NavItem>
-        <UncontrolledDropdown
-          inNavbar
-          nav
-        >
-        <DropdownToggle
-            caret
-            nav
-        >
-            Options
-        </DropdownToggle>
-        <DropdownMenu right>
-          <DropdownItem>
-            Option 1
-          </DropdownItem>
-          <DropdownItem>
-              Option 2
-          </DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>
-              Reset
-          </DropdownItem>
-        </DropdownMenu>
-        </UncontrolledDropdown>
       </Nav>
       <NavbarText>
-        Simple Text
       </NavbarText>
     </Collapse>
   </Navbar>

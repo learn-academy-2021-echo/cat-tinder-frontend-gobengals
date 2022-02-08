@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import {
   Form,
   FormGroup,
   Label,
-  Input
+  Input,
+  Button
 } from 'reactstrap'
 
 class CatNew extends Component{
@@ -15,14 +17,22 @@ class CatNew extends Component{
         age: "",
         enjoys: "",
         img: ""
-      }
+      },
+      submitted: false
     }
   }
+
  handleChange = (e) => {
   let { newCat } = this.state
   newCat[e.target.name] = e.target.value
   this.setState({ newCat: newCat })
  }
+
+ handleSubmit = () => {
+   this.props.createCat(this.state.newCat)
+   this.setState({ submitted: true })
+ }
+
   render(){
     console.log(this.state.newCat);
     return(
@@ -72,7 +82,9 @@ class CatNew extends Component{
             onChange={this.handleChange}
           />
         </FormGroup>
+        <Button onClick={this.handleSubmit} name='Submit'>Add a New Cat</Button>
       </Form>
+      {this.state.submitted && <Redirect to='/catIndex'/>}
     </>
       )
   }
